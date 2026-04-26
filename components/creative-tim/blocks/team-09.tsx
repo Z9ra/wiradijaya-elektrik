@@ -1,0 +1,138 @@
+"use client"
+
+import * as React from "react"
+import { Linkedin, Twitter } from "lucide-react"
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+
+const DATA = [
+  {
+    image:
+      "https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400",
+    name: "Sarah Johnson",
+    position: "Co-Founder & CEO",
+    about:
+      "Visionary leader passionate about innovation and empowering teams to achieve extraordinary results.",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400",
+    name: "Michael Chen",
+    position: "Chief Technology Officer",
+    about:
+      "Tech enthusiast driving digital transformation through cutting-edge solutions and engineering excellence.",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1574015974293-817f0ebebb74?auto=format&fit=crop&q=80&w=400&h=400",
+    name: "Emma Williams",
+    position: "Head of Design",
+    about:
+      "Creative designer crafting beautiful experiences that blend aesthetics with functionality.",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1750223642533-1b74b17edae8?auto=format&fit=crop&q=80&w=400&h=400",
+    name: "Alex Rivera",
+    position: "Marketing Director",
+    about:
+      "Strategic marketer building brands and driving growth through data-driven campaigns.",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400",
+    name: "Jessica Martinez",
+    position: "Frontend Developer",
+    about:
+      "Passionate developer creating seamless user interfaces with modern web technologies.",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400",
+    name: "David Kim",
+    position: "Full Stack Developer",
+    about:
+      "Versatile engineer building robust applications from concept to deployment.",
+  },
+]
+
+export default function Team09() {
+  return (
+    <section className="py-20">
+      <div className="container mx-auto">
+        <div className="mb-20 text-center">
+          <p className="text-primary mb-3 block text-sm font-bold tracking-wide uppercase">
+            Meet Us
+          </p>
+          <h2 className="mb-4 text-4xl font-bold md:text-5xl">
+            Our Awesome Team
+          </h2>
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg leading-relaxed [text-wrap:_balance]">
+            Talented individuals working together to create exceptional
+            experiences. Meet the people behind our success and innovation.
+          </p>
+        </div>
+        <div className="mx-auto grid max-w-5xl grid-cols-1 items-start gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {DATA.map(({ image, name, position, about }, key) => (
+            <Card
+              key={key}
+              className="group border-0 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+            >
+              <CardHeader className="flex justify-center p-6 pb-0">
+                <div className="relative">
+                  <Avatar className="h-28 w-28 ring-4 ring-white/50 transition-all duration-300 group-hover:scale-110 group-hover:ring-neutral-900/20">
+                    <AvatarImage src={image} alt={name} />
+                    <AvatarFallback className="bg-neutral-900 text-xl text-white">
+                      {name.charAt(0)}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-t from-neutral-900/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                </div>
+              </CardHeader>
+              <CardContent className="mt-6 px-6 pb-6 text-center">
+                <p className="text-xl font-bold">{name}</p>
+                <p className="text-muted-foreground mt-1 mb-4 text-sm font-semibold tracking-wide uppercase">
+                  {position}
+                </p>
+                <p className="text-muted-foreground mb-6 leading-relaxed [text-wrap:_balance]">
+                  {about}
+                </p>
+                <div className="flex items-center justify-center gap-1">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-9 w-9 transition-colors hover:bg-neutral-100 hover:text-neutral-900"
+                  >
+                    <Twitter className="h-4 w-4" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-9 w-9 transition-colors hover:bg-neutral-100 hover:text-neutral-900"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-9 w-9 transition-colors hover:bg-neutral-100 hover:text-neutral-900"
+                  >
+                    <svg
+                      className="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

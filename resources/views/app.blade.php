@@ -7,12 +7,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Wiradijaya Elektrik</title>
     @viteReactRefresh
-    @vite(['resources/js/public/App.jsx', 'resources/js/admin/App.jsx'])
+    @vite(['resources/css/app.css',
+    'resources/js/public/App.jsx',
+    'resources/js/admin/App.jsx'])
 </head>
 
 <body>
-    <div id="app"></div> <!-- mount point React public -->
-    <div id="admin"></div> <!-- mount point React admin -->
+    <div id="app"></div>
+    <div id="admin"></div>
 </body>
 
 </html>
