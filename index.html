@@ -10,6 +10,52 @@
         <title>Wiradijaya Elektrik</title>
 
         <!-- CSS FILES -->
+         <style>
+            .brand-logo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+                flex-shrink: 0;
+            }
+
+            .brand-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 0 0 auto;
+            }
+
+            .brand-icon img {
+                width: clamp(34px, 4vw, 56px);
+                height: auto;
+                display: block;
+            }
+
+            .brand-text {
+                color: #1ec8ff;
+                font-weight: 700;
+                line-height: 1;
+                font-size: clamp(12px, 1.4vw, 18px);
+                letter-spacing: 0.5px;
+                white-space: nowrap;
+            }
+
+            @media (max-width: 768px) {
+                .brand-logo {
+                gap: 8px;
+                }
+
+                .brand-icon img {
+                width: 32px;
+                }
+
+                .brand-text {
+                font-size: 11px;
+                }
+            }
+        </style>
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +67,8 @@
         <link href="css/bootstrap-icons.css" rel="stylesheet">
 
         <link href="css/templatemo-leadership-event.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         
     </head>
     
@@ -33,11 +81,12 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <a href="index.html" class="navbar-brand mx-auto mx-lg-0">
-                    
-                    <span class="brand-text">Wiradijaya<br><br>Elektrik</span>
+                <a href="index.html" class="navbar-brand mx-auto mx-lg-0 brand-logo">
+                    <span class="brand-icon">
+                        <img src="images/logo/logo.png" alt="Wiradijaya Elektrik">
+                    </span>
+                    <span class="brand-text">Wiradijaya<br>Elektrik</span>
                 </a>
-
                 <a class="nav-link custom-btn btn d-lg-none" href="#">Consult Now</a>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -101,8 +150,6 @@
                 <div class="video-wrap">
                     <video autoplay="" loop="" muted="" class="custom-video" poster="">
                         <source src="videos/0428.mp4" type="video/mp4">
-
-                        Your browser does not support the video tag.
                     </video>
                 </div>
             </section>
@@ -119,7 +166,7 @@
                                 <div class="highlight-info">
                                     <h3 class="highlight-title">2019 Highlights</h3>
 
-                                    <a href="https://www.youtube.com/templatemo" class="bi-youtube highlight-icon"></a>
+                                    <a href="#" class="bi-youtube highlight-icon"></a>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +178,7 @@
                                 <div class="highlight-info">
                                     <h3 class="highlight-title">2020 Highlights</h3>
 
-                                    <a href="https://www.youtube.com/templatemo" class="bi-youtube highlight-icon"></a>
+                                    <a href="#" class="bi-youtube highlight-icon"></a>
                                 </div>
                             </div>
                         </div>
@@ -143,7 +190,7 @@
                                 <div class="highlight-info">
                                     <h3 class="highlight-title">2021 Highlights</h3>
 
-                                    <a href="https://www.youtube.com/templatemo" class="bi-youtube highlight-icon"></a>
+                                    <a href="#" class="bi-youtube highlight-icon"></a>
                                 </div>
                             </div>
                         </div>
